@@ -1,0 +1,398 @@
+<?php 
+function my_wp_nav_menu_args( $args = '' ) {
+$args['container'] = false;
+return $args;
+}
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'main-menu' => __( 'Main Menu' ),
+      'footer-menu' => __( 'Footer Menu' )
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
+
+
+
+if ( function_exists( 'add_theme_support' ) ) {
+add_theme_support( 'post-thumbnails' );
+}
+
+function add_id_and_classes_to_page_menu( $ulclass ) {
+  return preg_replace( '/<ul>/', '<ul class="main_menu">', $ulclass, 1 );
+}
+add_filter( 'wp_page_menu', 'add_id_and_classes_to_page_menu' );
+
+function rizrazor_theme_customizer( $wp_customize ) {
+    $wp_customize->add_section( 'riz_logo_section' , array(
+    'title'       => __( 'Logo Image', 'rizlogo' ),
+    'priority'    => 30,
+    'description' => 'Upload a logo to replace the default site name and description in the header',
+	) );
+	
+	$wp_customize->add_setting( 'riz_logo' );
+	
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'riz_logo', array(
+    'label'    => __( 'Logo Upload', 'rizlogo' ),
+    'section'  => 'riz_logo_section',
+    'settings' => 'riz_logo',
+	) ) );
+
+}
+add_action('customize_register', 'rizrazor_theme_customizer');
+
+function tech_address_theme_customizer( $wp_customize ) {
+    $wp_customize->add_section( 'tech_footer_address_section' , array(
+    'title'       => __( 'Footer Address', 'tech_addr' ),
+    'priority'    => 30,
+    'description' => 'Enter text to replace the default site of Footer Address',
+	) );
+	///////////////////////////// For Call Text /////////////////////////////////////////////
+	 $wp_customize->add_setting( 'tech_footer__address', array(
+    	'default' => 'Enter the Adress to View in footer',
+	) );
+	$wp_customize->add_control( 'tech_footer__address', array(
+    'label' => 'Footer Address',
+    'section' => 'tech_footer_address_section', // id of section to which the setting belongs
+	) );
+}
+add_action('customize_register', 'tech_address_theme_customizer');
+
+function tech_email_theme_customizer( $wp_customize ) {
+    $wp_customize->add_section( 'tech_footer_email_section' , array(
+    'title'       => __( 'Email Id', 'tech_email' ),
+    'priority'    => 40,
+    'description' => 'Enter text to replace the default Email Id.',
+	) );
+	///////////////////////////// For Call Text /////////////////////////////////////////////
+	 $wp_customize->add_setting( 'tech_footer_email_address', array(
+    	'default' => 'support@yourdomain.com',
+	) );
+	$wp_customize->add_control( 'tech_footer_email_address', array(
+    'label' => 'Email Id.',
+    'section' => 'tech_footer_email_section', // id of section to which the setting belongs
+	) );
+}
+add_action('customize_register', 'tech_email_theme_customizer');
+
+function tech_call_theme_customizer( $wp_customize ) {
+    $wp_customize->add_section( 'tech_footer_phone_section' , array(
+    'title'       => __( 'Phone No', 'tech_phone' ),
+    'priority'    => 50,
+    'description' => 'Enter text to replace the default site of Footer Phone No.',
+	) );
+	///////////////////////////// For Call Text /////////////////////////////////////////////
+	 $wp_customize->add_setting( 'tech_footer_phone_address', array(
+    	'default' => '+1-00-000 0000',
+	) );
+	$wp_customize->add_control( 'tech_footer_phone_address', array(
+    'label' => 'Phone No.',
+    'section' => 'tech_footer_phone_section', // id of section to which the setting belongs
+	) );
+}
+add_action('customize_register', 'tech_call_theme_customizer');
+
+function tech_timing_theme_customizer( $wp_customize ) {
+    $wp_customize->add_section( 'tech_footer_timing_section' , array(
+    'title'       => __( 'Office Time', 'tech_time' ),
+    'priority'    => 60,
+    'description' => 'Enter text to replace the default site of Footer Timing',
+	) );
+	///////////////////////////// For Call Text /////////////////////////////////////////////
+	 $wp_customize->add_setting( 'tech_footer_timing', array(
+    	'default' => 'Mon - Sat 8AM - 17PM',
+	) );
+	$wp_customize->add_control( 'tech_footer_timing', array(
+    'label' => 'Office Time',
+    'section' => 'tech_footer_timing_section', // id of section to which the setting belongs
+	) );
+}
+add_action('customize_register', 'tech_timing_theme_customizer');
+
+function tech_footer_theme_customizer( $wp_customize ) {
+    $wp_customize->add_section( 'tech_footer_copy_section' , array(
+    'title'       => __( 'Footer Copyright', 'TechFairy' ),
+    'priority'    => 70,
+    'description' => 'Enter text to replace the default site of Footer text',
+	) );
+	///////////////////////////// For Footer Address /////////////////////////////////////////////
+	 $wp_customize->add_setting( 'tech_footer_copyright', array(
+    'default' => 'Copyright 2020 &copy; <span>Tech Fairy</span>. All Rights Reserved.',
+	) );
+	$wp_customize->add_control( 'tech_footer_copyright', array(
+    'label' => 'Footer Copyright',
+    'section' => 'tech_footer_copy_section', // id of section to which the setting belongs
+	) );
+}
+add_action('customize_register', 'tech_footer_theme_customizer');
+
+register_sidebar(array(
+  'name' => __( 'Home Page Widgets1' ),
+  'id' => 'home_services',
+  'description' => __( 'Widgets in this area will be shown on the Home page Services' ),
+  'before_widget' => '<div class="mservices single-post-area mb-100 wow fadeInUp" data-wow-delay="300ms">',
+  'after_widget'  => '</div>',
+  'before_title' => '<h2>',
+  'after_title' => '</h2>'
+));
+register_sidebar(array(
+  'name' => __( 'Home Page Widget 2' ),
+  'id' => 'wecome_content',
+  'description' => __( 'Welcome section content will be displayed' ),
+  'before_widget' => '<h5 class="wow fadeInUp" data-wow-delay="300ms">',
+  'after_widget'  => '</h5>',
+  'before_title' => '<h6>',
+  'after_title' => '</h6>'
+));
+register_sidebar(array(
+  'name' => __( 'Home Page Widget 3' ),
+  'id' => 'welcome_image',
+  'description' => __( 'Welcome section Image will be displayed' ),
+  'before_widget' => '<div class="single-thumb">',
+  'after_widget'  => '</div>',
+  'before_title' => '',
+  'after_title' => ''
+));
+
+function social_media_icons( $contactmethods ) {
+    // Add social media
+	$contactmethods['facebook'] = 'Facebook';
+    $contactmethods['twitter'] = 'Twitter';
+	$contactmethods['linkedin'] = 'Linkedin';
+    $contactmethods['gplus'] = 'Google Plus';
+
+    return $contactmethods;
+}
+add_filter('user_contactmethods','social_media_icons',10,1);
+
+
+
+//Breadcrumb
+
+function the_breadcrumb() {
+    global $post;
+    echo '<ul class="pagebreadcrumb">';
+    if (!is_home()) {
+        echo '<li><a href="';
+        echo get_option('home');
+        echo '">';
+        echo 'Home';
+        echo '</a></li><li class="separator"> &raquo; </li>';
+        if (is_category() || is_single()) {
+            echo '<li>';
+            the_category(' </li><li class="separator"> &raquo; </li><li> ');
+            if (is_single()) {
+                echo '</li><li class="separator"> &raquo; </li><li>';
+                the_title();
+                echo '</li>';
+            }
+        } elseif (is_page()) {
+            if($post->post_parent){
+                $anc = get_post_ancestors( $post->ID );
+                $title = get_the_title();
+                foreach ( $anc as $ancestor ) {
+                    $output = '<li><a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="separator">/</li>';
+                }
+                echo $output;
+                echo '<strong title="'.$title.'"> '.$title.'</strong>';
+            } else {
+                echo '<li><strong> '.get_the_title().'</strong></li>';
+            }
+        }
+    }
+    elseif (is_tag()) {single_tag_title();}
+    elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
+    elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
+    elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
+    elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
+    elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
+    elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
+    echo '</ul>';
+}
+
+
+/* Home Ad One Custom Post */
+
+function cw_post_type_chirogallery() {
+$supports = array(
+'title', // post title
+//'editor', // post content
+//'author', // post author
+'thumbnail', // featured images
+//'excerpt', // post excerpt
+//'custom-fields', // custom fields
+//'comments', // post comments
+//'revisions', // post revisions
+//'post-formats', // post formats
+);
+$labels = array(
+'name' => _x('Chiro Gallery', 'plural'),
+'singular_name' => _x('Chiro Gallery', 'singular'),
+'menu_name' => _x('Chiro Gallery', 'admin menu'),
+'name_admin_bar' => _x('Chiro Gallery', 'admin bar'),
+'add_new' => _x('Create New Gallery', 'add new'),
+'add_new_item' => __('Add New Chiro Gallery'),
+'new_item' => __('Create New Gallery'),
+'edit_item' => __('Edit Chiro Gallery'),
+'view_item' => __('View Chiro Gallery'),
+'all_items' => __('All Chiro Gallery'),
+'search_items' => __('Search Chiro Gallery'),
+'not_found' => __('No Chiro Gallery found.'),
+);
+$args = array(
+'supports' => $supports,
+'labels' => $labels,
+'public' => true,
+'query_var' => true,
+'rewrite' => array('slug' => 'chirogallery'),
+'menu_icon' => 'dashicons-welcome-view-site',
+'has_archive' => true,
+'hierarchical' => false,
+);
+register_post_type('chirogallery', $args);
+}
+add_action('init', 'cw_post_type_chirogallery');
+
+/*Custom Post type end*/
+
+
+
+/* Home Expetise Custom Post */
+
+function cw_post_type_ourteam() {
+$supports = array(
+'title', // post title
+'editor', // post content
+//'author', // post author
+'thumbnail', // featured images
+//'excerpt', // post excerpt
+//'custom-fields', // custom fields
+//'comments', // post comments
+//'revisions', // post revisions
+//'post-formats', // post formats
+);
+$labels = array(
+'name' => _x('Our Team', 'plural'),
+'singular_name' => _x('Our Team', 'singular'),
+'menu_name' => _x('Our Team', 'admin menu'),
+'name_admin_bar' => _x('Our Team', 'admin bar'),
+'add_new' => _x('Add New', 'add new'),
+'add_new_item' => __('Add New Our Team'),
+'new_item' => __('New Our Team'),
+'edit_item' => __('Edit Our Team'),
+'view_item' => __('View Our Team'),
+'all_items' => __('All Our Team'),
+'search_items' => __('Search Our Team'),
+'not_found' => __('No Our Team found.'),
+);
+$args = array(
+'supports' => $supports,
+'labels' => $labels,
+'public' => true,
+'query_var' => true,
+'rewrite' => array('slug' => 'ourteam'),
+'menu_icon' => 'dashicons-sos',
+'has_archive' => true,
+'hierarchical' => false,
+);
+register_post_type('ourteam', $args);
+}
+add_action('init', 'cw_post_type_ourteam');
+
+/*Custom Post type end*/
+
+/* Inner who we help Post */
+
+function cw_post_type_whowehelp() {
+$supports = array(
+'title', // post title
+'editor', // post content
+'thumbnail', // featured images
+);
+$labels = array(
+'name' => _x('Help Service', 'plural'),
+'singular_name' => _x('Help Service', 'singular'),
+'menu_name' => _x('Help Service', 'admin menu'),
+'name_admin_bar' => _x('Help Service', 'admin bar'),
+'add_new' => _x('Add New', 'add new'),
+'add_new_item' => __('Add New Services'),
+'new_item' => __('New Services'),
+'edit_item' => __('Edit Services'),
+'view_item' => __('View Services'),
+'all_items' => __('All Services'),
+'search_items' => __('Search Services'),
+'not_found' => __('No Services found.'),
+);
+$args = array(
+'supports' => $supports,
+'labels' => $labels,
+'public' => true,
+'query_var' => true,
+'rewrite' => array('slug' => 'whowehelp'),
+'menu_icon' => 'dashicons-slides',
+'has_archive' => true,
+'hierarchical' => false,
+);
+register_post_type('whowehelp', $args);
+}
+add_action('init', 'cw_post_type_whowehelp');
+
+/*Custom who we help end*/
+
+/* Home Resort Gallery Custom Post */
+/*
+function cw_post_type_testimonials() {
+$supports = array(
+'title',
+'editor',
+'thumbnail', // featured images
+
+);
+$labels = array(
+'name' => _x('Testimonials', 'plural'),
+'singular_name' => _x('Testimonials', 'singular'),
+'menu_name' => _x('Testimonials', 'admin menu'),
+'name_admin_bar' => _x('Testimonials', 'admin bar'),
+'add_new' => _x('Add New', 'add new'),
+'add_new_item' => __('Add New Testimonials'),
+'new_item' => __('New Testimonials'),
+'edit_item' => __('Edit Testimonials'),
+'view_item' => __('View Testimonials'),
+'all_items' => __('All Testimonials'),
+'search_items' => __('Search Testimonials'),
+'not_found' => __('No Testimonials found.'),
+);
+$args = array(
+'supports' => $supports,
+'labels' => $labels,
+'public' => true,
+'query_var' => true,
+'rewrite' => array('slug' => 'testimonials'),
+'menu_icon' => 'dashicons-thumbs-up',
+'has_archive' => true,
+'hierarchical' => false,
+);
+register_post_type('testimonials', $args);
+}
+add_action('init', 'cw_post_type_testimonials');
+/*Custom Post type end*/
+
+/* Post Type for Projects on Home page */
+/*
+function projects_setup_post_type() {
+    $args = array(
+        'public'    => true,
+        'label'     => __( 'Projects', 'textdomain' ),
+        'menu_icon' => 'dashicons-welcome-view-site',
+		'taxonomies' => array( 'category' ),
+		'has_archive' => false,
+		'supports' => array('title','editor','thumbnail')
+    );
+    register_post_type( 'projects', $args );
+		//flush_rewrite_rules();
+}
+add_action( 'init', 'projects_setup_post_type' );
+
+*/
+
