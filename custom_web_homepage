@@ -1,0 +1,492 @@
+<?php get_header(); ?>
+<!-- ***** Hero Area Start ***** -->
+<section class="hero-area hero_back">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-6">
+                <div class="banner-content">
+                    <h2>Your Exceptional<br>Chiropractic Care</h2>
+                    <h5>Here at Papakura Chiropractic we are focused on creating a healing environment for you and your family, so that you and everyone you love can enjoy the benefits of a body that is working as optimally as it should.</h5>
+                    <div class="slide-btn-group mt-50">
+                        <a href="tel:092987766" class="btn medica-btn btn-2">Call Now</a>
+                        <a href="<?php echo site_url(); ?>/about-us/" class="btn medica-btn btn-1 ml-2">Learn More</a> 
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-6">
+                <img src="<?php bloginfo('template_directory'); ?>/images/banner_main.png" alt="Banner">
+				<?php /* ?><?php echo do_shortcode('[smartslider3 slider="2"]'); ?><?php */ ?>
+				<!--
+                <div class="hero-slides owl-carousel">
+                    
+                    <div class="single-hero-slide height-600 bg-img">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/papa_banner1.png" alt="Banner">
+                    </div>
+                   
+                    <div class="single-hero-slide height-600 bg-img">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/papa_banner2.png" alt="Banner">
+                    </div>
+                    
+                    <div class="single-hero-slide height-600 bg-img">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/papa_banner1.png" alt="Banner">
+                    </div>
+                </div>
+				-->
+            </div>
+        </div>
+    </div>    
+</section>
+    <!-- ***** Hero Area End ***** -->
+    <!-- ***** CTA Area Start ***** -->
+    <section class="medica-call-to-action">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 counter_cont">
+                    <div class="row">
+                        <!-- Single Cool Fact-->
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="single-cool-fact wow fadeIn" data-wow-delay="0.2s">
+                                <div class="counter-area">
+                                    <img src="<?php bloginfo('template_directory'); ?>/images/xray.png" alt="icon">
+                                    <!--<h2><span class="counter">4</span></h2>-->
+                                    <h6>On-site<br>x-ray facility</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Cool Fact-->
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="single-cool-fact wow fadeIn" data-wow-delay="0.6s">
+                                <div class="counter-area">
+                                    <i class="icofont-people"></i>
+                                    <!--<h2><span class="counter">5239</span>+</h2>-->
+                                    <h6>Registered<br>ACC providers</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Cool Fact-->
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="single-cool-fact wow fadeIn" data-wow-delay="1s">
+                                <div class="counter-area">
+                                    <i class="icofont-doctor-alt"></i>
+                                    <!--<h2><span class="counter">4</span></h2>-->
+                                    <h6>Four<br>Neurological Scans</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Cool Fact-->
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="single-cool-fact wow fadeIn" data-wow-delay="1.4s">
+                                <div class="counter-area">
+                                    <img src="<?php bloginfo('template_directory'); ?>/images/tt.png" alt="icon">
+                                    <!--<h2><span class="counter">12</span></h2>-->
+                                    <h6>Top to Toe<br>Full-Body Assessment</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- ***** CTA Area End ***** -->
+
+    <!-- ***** About Us Area Start ***** -->
+    <section class="medica-about-us-area">      
+        <!-- About Contact -->
+        <div class="medica-about-content section_padding_50">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6">
+                        <div class="medica-about-thumbnail">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/home_about.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                        <div class="medica-about-text">
+                            <h2>About Our Practice</h2>
+                            <p>Papakura Chiropractic is a family owned and operated business located in the heart of Papakura. The practice itself has been serving the community for over 60 years, and as the third-generation chiropractors here we are so passionate about bringing vibrancy to the life of every individual we connect with!<br><br>We focus on the health of the whole body, and do this using a series of functional tests, neurological scans, postural assessments and x-rays (if needed) to understand exactly what stresses your body is trying to overcome. 
+</p>
+                           
+                            <a href="https://jpsite.in/demo/papakura/about-us/" class="btn medica-btn btn-1 ml-2">Read More</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** About Us Area End ***** -->
+
+    <!-- ***** Services Area Start ***** -->
+    <section class="medica-services-area section_padding_50 bg-img gradient-background-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section_heading">
+                        <h2>Our Services</h2>
+                        <img src="<?php bloginfo('template_directory'); ?>/images/heading_underline.jpg" alt="underline">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.2s">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/icon5.png" alt="">
+                        <h5>Pregnancy</h5>
+                        <p>We aim to support both mum and baby through this time of great change to give them the best chance at a successful pregnancy. <br><a href="<?php echo site_url(); ?>/who-we-help/">Read More</a></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.3s">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/icon6.png" alt="">
+                        <h5>Kids and Babies</h5>
+                        <p>Developing and learning can be tough – we ensure our kids are growing healthy and strong! <br><a href="<?php echo site_url(); ?>/who-we-help/">Read More</a><br><br></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.4s">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/icon7.png" alt="">
+                        <h5>Sports Performance</h5>
+                        <p>You perform at your best when your body is functioning optimally! We help you take your performance past what you thought was possible! <a href="<?php echo site_url(); ?>/who-we-help/">Read More</a></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.5s">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/icon8.png" alt="">
+                        <h5>Injury and Recovery</h5>
+                        <p>We help the body to heal more efficiently, so you can get back to what you love! <a href="<?php echo site_url(); ?>/who-we-help/">Read More</a><br><br><br></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.6s">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/icon9.png" alt="">
+                        <h5>Chronic Pain</h5>
+                        <p>Managing your pain at the root cause rather than just treating the symptoms. <br><a href="<?php echo site_url(); ?>/who-we-help/">Read More</a><br><br></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="single-service-area">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/icon10.png" alt="">
+                        <h5>Improving Immunity</h5>
+                        <p>Reducing your body’s built-up stress for a natural immunity boost! <br><a href="<?php echo site_url(); ?>/who-we-help/">Read More</a><br><br></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3">
+                    <div class="single-service-area wow fadeInUp" data-wow-delay="0.6s">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/icon11.png" alt="">
+                        <h5>Ageing Successfully</h5>
+                        <p>Allowing you to keep moving at your best, to continue doing what you love for as long as possible. <br> <a href="<?php echo site_url(); ?>/who-we-help/">Read More</a><br></p>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-6 col-lg-3 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="single-service-area">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/icon12.png" alt="">
+                        <h5>Health Improvement</h5>
+                        <p>Encouraging you to look at health from all angles, so we can create a plan that is right for your health! <br><a href="<?php echo site_url(); ?>/who-we-help/">Read More</a><br></p>
+                    </div>
+                </div>
+                <!--
+                <div class="col-12 text-center wow fadeInUp" data-wow-delay="0.9s">
+                    <a href="#" class="btn medica-btn">See All Services</a>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+    <!-- ***** Services Area End ***** -->
+    <!-- Journey Section-->
+    <section class="journey_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Start your Journey with Us</h2>
+                    <img src="<?php bloginfo('template_directory'); ?>/images/heading_underline.jpg" alt="underline">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="journey_img">
+                        <div class="row">
+                            <div class="perc1">
+                                <a id="parent">
+                                    <sapn class="pertxt">1</sapn>
+                                    <div id="hover-content" class="secont1">
+                                        <h4>Initial Consultation</h4>
+                                        <p>Made up of a full history and physical examination, including state-of-the-art neural scanning technology, full spinal examination, Range of Motion testing, functional neurological testing, and X-rays(if required).</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="perc2">&nbsp;</div>
+                            <div class="perc3">
+                                <a id="parent">
+                                    <sapn class="pertxt">2</sapn>
+                                    <div id="hover-content" class="secont2">
+                                        <h4>Problem Report</h4>
+                                        <p>We will explain to you the findings of your last visit, what we think is going on, and how we can help you. This visit includes your first adjustment.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="perc4">&nbsp;</div>
+                            <div class="perc5">
+                                <a id="parent">
+                                    <sapn class="pertxt">3</sapn>
+                                    <div id="hover-content" class="secont3">
+                                        <h4>Solution Report & Care Plan</h4>
+                                        <p>After seeing how your body reacts to your first adjustment, we create a care plan going forward with you. We will decide with you on the frequency of these adjustment visits on a regular basis. </p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="perc6">&nbsp;</div>
+                            <div class="perc7">
+                                <a id="parent">
+                                    <sapn class="pertxt">4</sapn>
+                                    <div id="hover-content" class="secont4">
+                                        <h4>Progress Visit</h4>
+                                        <p>Progress Visit - a 'checkpoint' at the end of your care plan to see how we are going, this allows us to ensure we are getting the desired outcome and meeting your goals, so that we know how to continue moving forward with your care.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="perc8">&nbsp;</div>
+                            <div class="perc9">
+                                <a id="parent">
+                                    <sapn class="pertxt">5</sapn>
+                                    <div id="hover-content" class="bx1 secont5">
+                                        <h4>Maintaining Your Health</h4>
+                                        <p>After we reach your goals, it’s important to keep your body tuned up to ensure your body doesn’t fall back into poor functioning habits.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Journey Section-->
+
+    <!-- ***** Doctors Area Start ***** -->
+    <section class="medica-doctors-area section_padding_50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section_heading">
+                        <h2>Meet Our Team</h2>
+                        <img src="<?php bloginfo('template_directory'); ?>/images/heading_underline.jpg" alt="underline">
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-sm-2 col-lg-2">&nbsp;</div>
+                <div class="col-12 col-sm-4 col-lg-4">
+                    <div class="single-doctor-area">
+                        <div class="doctor-thumbnail">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/ilaaria.jpg" alt="">
+                        </div>
+                        <div class="doctor-meta">
+                            <h5>Dr. Ilaaria Khan</h5>
+                            <h6>Chiropractor</h6>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-sm-4 col-lg-4">
+                    <div class="single-doctor-area">
+                        <div class="doctor-thumbnail">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/mohmmad.jpg" alt="">
+                        </div>
+                        <div class="doctor-meta">
+                            <h5>Dr. Mohammed Khan</h5>
+                            <h6>Chiropractor</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-2 col-lg-2">&nbsp;</div>
+                <div class="col-12 col-sm-2 col-lg-2">&nbsp;</div>
+                <div class="col-12 col-sm-4 col-lg-4">
+                    <div class="single-doctor-area">
+                        <div class="doctor-thumbnail">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/betham.jpg" alt="">
+                        </div>
+                        <div class="doctor-meta">
+                            <h5>Judith Betham </h5>
+                            <h6>Chiropractic Assistant</h6>                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-sm-4 col-lg-4">
+                    <div class="single-doctor-area">
+                        <div class="doctor-thumbnail">
+                            <img src="<?php bloginfo('template_directory'); ?>/images/jodie.jpg" alt="">
+                        </div>
+                        <div class="doctor-meta">
+                            <h5>Jodie Van Den Berg</h5>
+                            <h6>Chiropractic Assistant</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-sm-2 col-lg-2">&nbsp;</div>
+                <div class="col-md-12 text-center">
+                    <p><a href="<?php echo site_url(); ?>/meet-our-team/" class="seeall_btn">See All</a></p>
+                </div>                
+            </div>
+            
+        </div>
+    </section>
+    <!-- ***** Doctors Area End ***** -->
+
+    <!-- ***** Testimonials Area Start ***** -->
+    <section class="medica-testimonials-area section_padding_50">
+        <div class="container">
+            <div class="row">
+                <div class="col-12  col-sm-6 col-lg-6">
+                    <div class="whatwedo">
+                        <h2>Operating Hours</h2>
+                        <p>We are open a range of hours to suit most peoples’ busy schedules, including weekends. Call us to get started on your journey!</p>
+                        <div class="bs-example">
+							<table class="opening_calendar table table-bordered">
+								<tr>
+									<th scope="col">&nbsp;</th>
+									<th scope="col">MORNING</th>
+									<th scope="col">AFTERNOON</th>
+								</tr>
+								<tr>
+									<th scope="row">MONDAY</th>
+									<td>8:00 AM - 12:00 PM</td>
+									<td>3:00 PM - 7:00 PM</td>									
+								</tr>
+								<tr>
+									<th scope="row">TUESDAY</th>
+									<td class="gray">&nbsp;</td>
+									<td>3:00 PM - 7:00 PM</td>									
+								</tr>
+								<tr>
+									<th scope="row">WEDNESDAY</th>
+									<td>8:00 AM - 12:00 PM</td>
+									<td>3:00 PM - 7:00 PM</td>									
+								</tr>
+								<tr>
+									<th scope="row">THURSDAY</th>
+									<td>8:00 AM - 12:00 PM</td>
+									<td>3:00 PM - 7:00 PM</td>									
+								</tr>
+								<tr>
+									<th scope="row">FRIDAY</th>
+									<td>8:00 AM - 12:00 PM</td>
+									<td class="gray">&nbsp;</td>									
+								</tr>
+								<tr>
+									<th scope="row">SATURDAY</th>
+									<td>8:00 AM - 12:00 PM</td>
+									<td class="gray">&nbsp;</td>									
+								</tr>
+							</table>
+							
+                            <!--<div class="accordion" id="accordionExample">
+                                <div class="card">
+                                    <div class="card-header" id="headingOne">
+                                        <h2 class="mb-0">
+                                            <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapseOne">Mornings<i class="fa fa-plus"></i></button>									
+                                        </h2>
+                                    </div>
+                                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <p>Monday 8:00 - 11:00 am <BR> Wednesday 7:00 - 11:00 am <br> Thursday 9:00 - 11:00 am <BR> Friday 9:00 - 11:00 am <BR> <a href="https://jpsite.in/demo/papakura/" target="_blank">Book now.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingTwo">
+                                        <h2 class="mb-0">
+                                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo">Afternoon<i class="fa fa-plus"></i></button>
+                                        </h2>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <p>Monday 2:00 - 5:30 pm <BR> Tuesday 2:30 - 06:00 pm <br> Wednesday 2:00 - 05:30 pm <br> Thursday 2:00 - 05:30 pm <br> <a href="https://www.tutorialrepublic.com/twitter-bootstrap-tutorial/" target="_blank">Book now.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-header" id="headingThree">
+                                        <h2 class="mb-0">
+                                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree">Weekends<i class="fa fa-plus"></i></button>                     
+                                        </h2>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                            <p>Friday 9:00 - 11:00 am <BR> Saturday 7:00 - 11:00 am <br><a href="https://www.tutorialrepublic.com/css-tutorial/" target="_blank">Book now.</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>-->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12  col-sm-6 col-lg-6">
+                    <div class="wedo_sec">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/practice.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Testimonials Area End ***** -->
+
+    <!-- ***** Appointment Area Start ***** -->
+    <section class="medica-book-an-appointment-area section_padding_40_0">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <div class="col-12">
+                    <div class="medica-appointment-thumb">
+                        <img src="<?php bloginfo('template_directory'); ?>/images/callus.png" alt="">
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="btn_cont">
+                        <a href="tel:092987766" class="callus_btn">Call Us Now</a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- ***** Appointment Area End ***** -->    
+    <!-- ***** Instagram Gallery ****--->
+    <section class="igallery">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <?php echo do_shortcode('[insta-gallery id="1"]'); ?>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Instagram Gallery End ****--->
+
+    <!-- ***** Partners Area Start ***** -->
+    <section class="medica-our-partners-area section_padding_50">
+        <div class="container-fluid">
+            <div class="row">
+                <h2>Proudly Affiliated with</h2>
+                <div class="col-12">
+                    <div class="our-partners-logo d-flex align-items-center justify-content-between">
+                        <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/lg1.png" alt=""></a>
+                        <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/lg2.png" alt=""></a>
+                        <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/lg3.png" alt=""></a>
+                        <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/lg4.png" alt=""></a>
+                        <a href="#"><img src="<?php bloginfo('template_directory'); ?>/images/lg5.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Partners Area End ***** -->
+   
+
+<?php get_footer(); ?>
